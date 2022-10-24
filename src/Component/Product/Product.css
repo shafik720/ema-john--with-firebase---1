@@ -1,0 +1,13 @@
+
+
+
+
+.product-div{
+    border: 3px solid darkslateblue;
+    border-radius: 5px;
+}
+
+.product-div img{
+    width: 286px;
+    height: 286px;
+}
