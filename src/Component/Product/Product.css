@@ -32,6 +32,5 @@
     transition: all 0.2s;
 }
 .product-bottom:hover{
-    background-color: white;
-    color: darkviolet;
+    color: yellow;
 }
