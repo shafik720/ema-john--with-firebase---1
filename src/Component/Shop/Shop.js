@@ -1,9 +1,13 @@
 import React from 'react';
+import Cart from '../Cart/Cart';
+import Products from '../Products/Products';
+import './Shop.css'
 
 const Shop = () => {
     return (
-        <div>
-            <h2>Hello from shop</h2>
+        <div className="shop-div">
+            <Products></Products>
+            <Cart></Cart>
         </div>
     );
 };
