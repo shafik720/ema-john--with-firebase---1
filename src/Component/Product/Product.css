@@ -34,3 +34,7 @@
 .product-bottom:hover{
     color: yellow;
 }
+
+.product-bottom p span{
+    margin-left: 10px;
+}
