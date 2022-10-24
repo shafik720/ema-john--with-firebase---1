@@ -3,9 +3,10 @@
 
 
 .product-div{
-    border: 3px solid darkslateblue;
+    border: 1px solid darkslateblue;
     border-radius: 5px;
-    
+    position: relative;
+    height: 540px;
 }
 
 .product-div img{
@@ -16,4 +17,16 @@
 
 .product-body{
     padding: 5px 15px;
+}
+
+.product-bottom{
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    background-color: darkviolet;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
 }
