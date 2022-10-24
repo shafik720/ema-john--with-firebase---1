@@ -9,6 +9,9 @@ const Products = () => {
         .then(res=>res.json())
         .then(data=>setProducts(data));
     },[])
+    function getCart(){
+        console.log('clicked');
+    }
     return (
         <div>
             <h2 style = {{'textAlign':'center'}}>Total Products Found : {products.length} </h2>
@@ -17,6 +20,7 @@ const Products = () => {
                 products.map(index=><Product
                     key = {index.id}
                     index = {index}
+                    getCart = {getCart}
                 ></Product>)
             }
             </div>
