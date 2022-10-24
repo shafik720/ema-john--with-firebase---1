@@ -9,9 +9,14 @@ const Products = () => {
         .then(res=>res.json())
         .then(data=>setProducts(data));
     },[])
-    function getCart(){
-        console.log('clicked');
-    }
+
+    // cart update section
+    let [cart, setCart] = useState([]);
+    function getCart(element){
+        let newCart = [...cart, element];
+        setCart(newCart);           
+    }      
+    
     return (
         <div>
             <h2 style = {{'textAlign':'center'}}>Total Products Found : {products.length} </h2>
