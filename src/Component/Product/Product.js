@@ -1,11 +1,12 @@
 import React from 'react';
+import './Product.css'
 
 const Product = (props) => {
-    let {} = props.index
+    let {name, price,  quantity, seller, ratings, img} = props.index
     console.log(props);
     return (
-        <div>
-            <h2>Product Name : {props.index.name} </h2>
+        <div className="product-div">
+            <img src={img} alt=""/>
         </div>
     );
 };
