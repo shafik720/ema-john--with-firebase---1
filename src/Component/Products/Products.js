@@ -10,8 +10,8 @@ const Products = () => {
         .then(data=>setProducts(data));
     },[])
     return (
-        <div  style = {{'textAlign':'center'}}>
-            <h2>Total Products Found : {products.length} </h2>
+        <div>
+            <h2 style = {{'textAlign':'center'}}>Total Products Found : {products.length} </h2>
             <div className="products-div">
             {
                 products.map(index=><Product
