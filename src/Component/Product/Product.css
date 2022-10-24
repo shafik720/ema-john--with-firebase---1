@@ -29,4 +29,9 @@
     font-weight: 600;
     text-align: center;
     width: 100%;
+    transition: all 0.2s;
+}
+.product-bottom:hover{
+    background-color: white;
+    color: darkviolet;
 }
