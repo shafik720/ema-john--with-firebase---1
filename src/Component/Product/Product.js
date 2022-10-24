@@ -15,7 +15,7 @@ const Product = (props) => {
                 <p>Manufacturer : {seller} </p>
                 <p>Ratings : {ratings} star </p>
             </div>
-            <div onClick={()=>props.getCart(props.index)} className="product-bottom">
+            <div draggable onClick={()=>props.getCart(props.index)} className="product-bottom">
                 <p>Add to Cart <span><FontAwesomeIcon icon={faShoppingCart} /></span></p>
             </div>
         </div>

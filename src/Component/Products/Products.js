@@ -2,20 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
 import './Products.css'
 
-const Products = () => {
+const Products = (props) => {
     const [products, setProducts] = useState([]);
     useEffect(()=>{
         fetch('products.json')
         .then(res=>res.json())
         .then(data=>setProducts(data));
-    },[])
-
-    // cart update section
-    let [cart, setCart] = useState([]);
-    function getCart(element){
-        let newCart = [...cart, element];
-        setCart(newCart);           
-    }      
+    },[])      
     
     return (
         <div>
@@ -25,7 +18,7 @@ const Products = () => {
                 products.map(index=><Product
                     key = {index.id}
                     index = {index}
-                    getCart = {getCart}
+                    getCart = {props.getCart}
                 ></Product>)
             }
             </div>
