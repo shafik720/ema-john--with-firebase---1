@@ -11,7 +11,7 @@ const Products = (props) => {
         <div>
             
             <div className="products-div">
-                <Product index={index}></Product>
+                <Product index={index} getCart ={getCart} ></Product>
             </div>
             
         </div>
