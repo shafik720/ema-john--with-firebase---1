@@ -6,6 +6,7 @@
     padding: 0 15px;
 }
 .cart-div2{
-    position: sticky;
-    top: 30%;
+    /* position: sticky;
+    top: 30%; */
+    border: none;
 }

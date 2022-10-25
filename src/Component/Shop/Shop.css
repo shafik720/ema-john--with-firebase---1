@@ -10,3 +10,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
+.cart-div{
+    position: relative;
+}
+
+.cart-div2{
+    position: sticky;
+    top: 30%;
+}
