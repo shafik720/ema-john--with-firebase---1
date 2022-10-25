@@ -24,7 +24,10 @@ const Shop = () => {
     // get value from local storage
     useEffect(()=>{
         const storedCart = getStoredCart();
-        console.log(storedCart);
+        for(let element in storedCart){
+            console.log(element);
+        }
+        
     },[cart])
     return (
         <div className="shop-div">
