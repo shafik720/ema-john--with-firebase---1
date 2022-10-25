@@ -7,6 +7,8 @@ const addToDb = id =>{
     if(storedCart){
         shoppingCart = JSON.parse(storedCart);
     }
+    //shortcut of above code
+    // let shoppingCart = JSON.parse(localStorage.getItem('shopping-cart') || '{}');
 
     // add quantity
     const quantity = shoppingCart[id];
