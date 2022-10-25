@@ -3,24 +3,15 @@ import Product from '../Product/Product';
 import './Products.css'
 
 const Products = (props) => {
-    const [products, setProducts] = useState([]);
-    useEffect(()=>{
-        fetch('products.json')
-        .then(res=>res.json())
-        .then(data=>setProducts(data));
-    },[])      
+
+    let{getCart, index} = props
+        
     
     return (
         <div>
-            <h2 style = {{'textAlign':'center'}}>Total Products Found : {products.length} </h2>
+            
             <div className="products-div">
-            {
-                products.map(index=><Product
-                    key = {index.id}
-                    index = {index}
-                    getCart = {props.getCart}
-                ></Product>)
-            }
+                <Product index={index}></Product>
             </div>
             
         </div>

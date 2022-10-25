@@ -4,8 +4,9 @@ import './Product.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCoffee, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
-const Product = (props) => {
-    let {name, price,  quantity, seller, ratings, img} = props.index  
+const Product = (props) => {    
+    let {name, price,  quantity, seller, ratings, img} = props.index;
+    console.log(name);
     return (
         <div className="product-div">
             <img src={img} alt=""/>
