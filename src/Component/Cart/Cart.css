@@ -1,0 +1,11 @@
+
+
+.cart-div{
+    position: relative; 
+    border-left: 2px solid darkcyan;
+    padding: 0 15px;
+}
+.cart-div2{
+    position: sticky;
+    top: 30%;
+}
