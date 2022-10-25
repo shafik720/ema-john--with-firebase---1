@@ -25,10 +25,11 @@ const Shop = () => {
     useEffect(()=>{
         const storedCart = getStoredCart();
         for(let element in storedCart){
-            console.log(element);
+            let addedProduct =(products.find(product=>product.id === element));
+            console.log(addedProduct);
         }
         
-    },[cart])
+    },[products])
     return (
         <div className="shop-div">
             <div className="products-div">
