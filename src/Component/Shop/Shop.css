@@ -13,6 +13,7 @@
 
 .cart-div{
     position: relative;
+    border-left: 3px solid blue;
 }
 
 .cart-div2{
