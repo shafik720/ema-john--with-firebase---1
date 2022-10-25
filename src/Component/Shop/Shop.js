@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { addToDb } from '../../utilities/fakedb';
+import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Products from '../Products/Products';
 import './Shop.css'
@@ -11,7 +11,7 @@ const Shop = () => {
         fetch('products.json')
         .then(res=>res.json())
         .then(data=>setProducts(data));
-    },[])  
+    },[])      
     
     // cart update section
     let [cart, setCart] = useState([]);
@@ -21,6 +21,11 @@ const Shop = () => {
         addToDb(element.id);
     }    
 
+    // get value from local storage
+    useEffect(()=>{
+        const storedCart = getStoredCart();
+        console.log(storedCart);
+    },[cart])
     return (
         <div className="shop-div">
             <div className="products-div">
