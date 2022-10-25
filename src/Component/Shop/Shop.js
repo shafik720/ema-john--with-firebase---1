@@ -26,6 +26,7 @@ const Shop = () => {
                 products.map(index=><Products
                     index = {index}
                     getCart = {getCart}
+                    key = {index.id}
                 ></Products>)
             }
             </div>
