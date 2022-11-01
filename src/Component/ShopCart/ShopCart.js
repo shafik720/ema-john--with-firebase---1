@@ -10,6 +10,12 @@ const ShopCart = () => {
         <div>
             <h2>Total Products in our shop : {products.length} </h2>
             <h2>Product Added : {shops.length} </h2>
+            <div className="shopping-div">
+                <div className="shopping-div-left">
+                    
+                </div>
+                <div className="shopping-div-right"></div>
+            </div>
         </div>
     );
 };
