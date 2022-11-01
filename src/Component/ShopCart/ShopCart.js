@@ -1,6 +1,7 @@
 import React from 'react';
 import useProducts from '../hooks/useProducts';
 import useShops from '../hooks/useShops';
+import MiniCart from '../MiniCart/MiniCart';
 import './ShopCart.css'
 
 const ShopCart = () => {
@@ -12,7 +13,12 @@ const ShopCart = () => {
             <h2>Product Added : {shops.length} </h2>
             <div className="shopping-div">
                 <div className="shopping-div-left">
-                    
+                    {
+                        shops.map(index=><MiniCart
+                            index = {index}
+                            key={index.id}
+                        ></MiniCart>)
+                    }
                 </div>
                 <div className="shopping-div-right"></div>
             </div>
