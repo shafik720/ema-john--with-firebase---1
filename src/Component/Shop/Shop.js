@@ -22,14 +22,20 @@ const Shop = () => {
     }    
 
     // get value from local storage
+    let [shops, setShops] = useState([]);
     useEffect(()=>{
         const storedCart = getStoredCart();
-        for(let element in storedCart){
-            let addedProduct =(products.find(product=>product.id === element));
-            console.log(addedProduct);
+        let freshCart =[];
+        for(let id in storedCart){
+            let addedProduct =(products.find(product=>product.id === id));
+            if(addedProduct){
+                addedProduct.quantity = storedCart[id];
+                freshCart.push(addedProduct);
+            }
         }
-        
-    },[products])
+        console.log(freshCart);
+        setShops(freshCart);
+    },[products, cart])
     return (
         <div className="shop-div">
             <div className="products-div">
@@ -43,7 +49,7 @@ const Shop = () => {
             </div>
             <div className="cart-div">
                 <div className="cart-div2">
-                    <Cart cart = {cart} ></Cart>
+                    <Cart shops = {shops} ></Cart>
                 </div>
             
             </div>            
