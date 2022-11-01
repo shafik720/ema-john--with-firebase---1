@@ -30,7 +30,6 @@ const Shop = () => {
                 freshCart.push(addedProduct);
             }
         }
-        console.log(freshCart);
         setShops(freshCart);
     },[products, cart])
     return (
