@@ -1,5 +1,28 @@
 
 
+
+
+.mini-card{
+    width: 350px; 
+    border: 3px solid darkblue;
+    margin: 20px 10px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mini-card-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
 .mini-card-left img{
-    width: 70px;
+    width: 60px;    
+}
+
+.mini-card-left p{
+    margin: 0;    
+    /* padding: 1px; */
 }

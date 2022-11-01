@@ -6,11 +6,11 @@ import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 const MiniCart = (props) => {
     let {name, price,  quantity, seller, ratings, img} = props.index;
     return (
-        <div>
+        <div className="mini-card">
             <div className="mini-card-left">
                 <img src={img} alt=""/>
                 <div className="mini-card-details">
-                    <p>Name : {name} </p>
+                    <p>{name} </p>
                     <p>Price Per Unit : {price} </p>
                     <p>Quantity : {quantity}</p>                    
                 </div>
