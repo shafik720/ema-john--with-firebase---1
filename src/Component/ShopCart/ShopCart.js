@@ -1,4 +1,5 @@
 import React from 'react';
+import { removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import useProducts from '../hooks/useProducts';
 import useShops from '../hooks/useShops';
@@ -10,7 +11,7 @@ const ShopCart = () => {
     let [shops, setShops] = useShops(products);
 
     function deleteSingle(element){
-        
+        removeFromDb(element.id);
     }
     return (
         <div>
