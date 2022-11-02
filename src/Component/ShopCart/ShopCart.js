@@ -1,4 +1,5 @@
 import React from 'react';
+import Cart from '../Cart/Cart';
 import useProducts from '../hooks/useProducts';
 import useShops from '../hooks/useShops';
 import MiniCart from '../MiniCart/MiniCart';
@@ -20,7 +21,9 @@ const ShopCart = () => {
                         ></MiniCart>)
                     }
                 </div>
-                <div className="shopping-div-right"></div>
+                <div className="shopping-div-right">
+                    <Cart shops = {shops}></Cart>
+                </div>
             </div>
         </div>
     );

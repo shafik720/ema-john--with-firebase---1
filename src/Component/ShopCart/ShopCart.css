@@ -1,5 +1,11 @@
 
 
+
+
+.shopping-div{
+    display: grid;
+    grid-template-columns:  3fr 1fr;
+}
 .shopping-div-left{
     display: flex;
     flex-direction: column;
