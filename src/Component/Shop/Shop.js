@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router';
 import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import useProducts from '../hooks/useProducts';
@@ -18,6 +19,11 @@ const Shop = () => {
         addToDb(element.id);
     }    
 
+    let navigate = useNavigate();
+    function navigation(){
+        let url = '/shopcart'
+        navigate(url);
+    }
     // get value from local storage
     let [shops, setShops] = useState([]);
     useEffect(()=>{
@@ -31,7 +37,8 @@ const Shop = () => {
             }
         }
         setShops(freshCart);
-    },[products, cart])
+    },[products, cart]);
+    
     return (
         <div className="shop-div">
             <div className="products-div">
@@ -46,7 +53,7 @@ const Shop = () => {
             <div className="cart-div">
                 <div className="cart-div2">
                     <Cart shops = {shops} >
-                        <button>Proceed Checkout</button>
+                        <button onClick={navigation}>Proceed Checkout</button>
                     </Cart>
                 </div>
             
