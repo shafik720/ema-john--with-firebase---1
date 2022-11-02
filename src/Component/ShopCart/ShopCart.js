@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router';
 import { removeFromDb , getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import useProducts from '../hooks/useProducts';
@@ -24,6 +25,11 @@ const ShopCart = () => {
         }
         setShops(freshCart);
     }
+    let navigate = useNavigate();
+    function navigation(){
+        let url = '/'
+        navigate(url);
+    }
     return (
         <div>
             <h2>Total Products in our shop : {products.length} </h2>
@@ -40,7 +46,7 @@ const ShopCart = () => {
                 </div>
                 <div className="shopping-div-right">
                     <Cart shops = {shops}>
-                        <button>Back to Shopping</button>
+                        <button onClick={navigation}>Back to Shopping</button>
                     </Cart>
                 </div>
             </div>
