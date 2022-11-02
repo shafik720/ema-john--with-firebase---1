@@ -16,7 +16,7 @@ const MiniCart = (props) => {
                 </div>
             </div>
             <div className="mini-card-right">
-            <span><FontAwesomeIcon icon={faTrashCan} /></span>
+            <span onClick={()=>props.deleteSingle(props.index)}><FontAwesomeIcon icon={faTrashCan} /></span>
             </div>
         </div>
     );

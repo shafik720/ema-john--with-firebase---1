@@ -8,6 +8,10 @@ import './ShopCart.css'
 const ShopCart = () => {
     let [products, setProducts] = useProducts();
     let [shops, setShops] = useShops(products);
+
+    function deleteSingle(element){
+        
+    }
     return (
         <div>
             <h2>Total Products in our shop : {products.length} </h2>
@@ -18,11 +22,14 @@ const ShopCart = () => {
                         shops.map(index=><MiniCart
                             index = {index}
                             key={index.id}
+                            deleteSingle = {deleteSingle}
                         ></MiniCart>)
                     }
                 </div>
                 <div className="shopping-div-right">
-                    <Cart shops = {shops}></Cart>
+                    <Cart 
+                    shops = {shops}
+                    ></Cart>
                 </div>
             </div>
         </div>
