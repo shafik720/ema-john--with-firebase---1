@@ -39,9 +39,9 @@ const ShopCart = () => {
                     }
                 </div>
                 <div className="shopping-div-right">
-                    <Cart 
-                    shops = {shops}
-                    ></Cart>
+                    <Cart shops = {shops}>
+                        <button>Back to Shopping</button>
+                    </Cart>
                 </div>
             </div>
         </div>
