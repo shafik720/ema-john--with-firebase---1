@@ -29,6 +29,9 @@ const Cart = (props) => {
                     props.children
                 }
                 {
+                    quantity > 10 && <p>You have added enough products </p>
+                }
+                {
                     quantity < 4 ? <p>Keep Adding</p> : <button>Remove All</button>
                 }
             </div>
