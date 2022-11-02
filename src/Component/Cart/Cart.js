@@ -15,6 +15,7 @@ const Cart = (props) => {
     }
     tax += (totalPrice * 0.1);
     grandTotal = tax + totalPrice;
+    
     return (
         <div className='cart-div'>
             <div className="cart-div2">
@@ -26,6 +27,9 @@ const Cart = (props) => {
                 <h3>Grand Total : {grandTotal} </h3>
                 {
                     props.children
+                }
+                {
+                    quantity < 4 ? <p>Keep Adding</p> : <button>Remove All</button>
                 }
             </div>
             
