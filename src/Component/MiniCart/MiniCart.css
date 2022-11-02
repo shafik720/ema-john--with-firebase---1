@@ -26,3 +26,9 @@
     margin: 0;    
     /* padding: 1px; */
 }
+
+
+.mini-card-right span{
+    cursor: pointer;
+    font-size: 25px;
+}
