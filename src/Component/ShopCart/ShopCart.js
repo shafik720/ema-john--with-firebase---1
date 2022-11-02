@@ -1,5 +1,5 @@
 import React from 'react';
-import { removeFromDb } from '../../utilities/fakedb';
+import { removeFromDb , getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import useProducts from '../hooks/useProducts';
 import useShops from '../hooks/useShops';
@@ -12,6 +12,17 @@ const ShopCart = () => {
 
     function deleteSingle(element){
         removeFromDb(element.id);
+
+        const storedCart = getStoredCart();
+        let freshCart =[];
+        for(let id in storedCart){
+            let addedProduct =(products.find(product=>product.id === id));
+            if(addedProduct){
+                addedProduct.quantity = storedCart[id];
+                freshCart.push(addedProduct);
+            }
+        }
+        setShops(freshCart);
     }
     return (
         <div>
