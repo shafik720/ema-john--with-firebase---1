@@ -10,6 +10,7 @@ const Register = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 mx-auto">
+                        <form action="">
                         <div className="login-div mx-auto">
                             <h2>Register</h2>
                             <div className="email-div">
@@ -18,6 +19,10 @@ const Register = () => {
                             </div>
                             <div className="password-div">
                                 <p>Password</p>
+                                <input type="password" name="" id="" />
+                            </div>
+                            <div className="password-div">
+                                <p>Confirm Password</p>
                                 <input type="password" name="" id="" />
                             </div>
                             <div className="login-button">
@@ -30,6 +35,7 @@ const Register = () => {
                                 Continue With Google
                             </div>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
