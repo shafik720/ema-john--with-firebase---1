@@ -5,7 +5,7 @@
     padding: 20px 20px;
 }
 
-.login-div h1{
+.login-div h2{
     text-align: center;
     margin: 0 0 15px 0;
 }
@@ -15,7 +15,7 @@
 .login-div span{
     text-align: center;
     display: block;
-    margin: 15px 0;
+    margin: 5px 0;
 }
 
 .login-div input{
@@ -70,7 +70,15 @@
     text-align: center;
     font-weight: 600;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .google-div:hover{
-    color: orangered;
+    color: #0080CE;
+}
+.google-div img{
+    width: 20px;
+    height: 20px;
+    margin: 0 7px;
 }

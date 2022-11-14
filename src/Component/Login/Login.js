@@ -1,5 +1,7 @@
 import React from 'react';
-import './Login.css'
+import './Login.css';
+import googleLogo from "../../utilities/google.svg"
+
 
 const Login = () => {
     return (
@@ -8,7 +10,7 @@ const Login = () => {
                 <div className="row">
                     <div className="col-lg-6 mx-auto">
                         <div className="login-div mx-auto">
-                            <h1>Log In</h1>
+                            <h2>Log In</h2>
                             <div className="email-div">
                                 <p>Email</p>
                                 <input type="email" name="" id="" />
@@ -23,6 +25,7 @@ const Login = () => {
                             </div>
                             <span><h5>Or</h5></span>
                             <div draggable className="google-div">
+                                <img src={googleLogo} alt="" />
                                 Continue With Google
                             </div>
                         </div>
