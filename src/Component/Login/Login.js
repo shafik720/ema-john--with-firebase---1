@@ -21,8 +21,8 @@ const Login = () => {
                                 <button>Login</button>
                                 <p>New to Ema-John ? <a href="#">Create New Account</a> </p>
                             </div>
-                            <span>Or</span>
-                            <div className="google-div">
+                            <span><h5>Or</h5></span>
+                            <div draggable className="google-div">
                                 Continue With Google
                             </div>
                         </div>

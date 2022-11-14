@@ -12,6 +12,11 @@
 .login-div p{
     margin: 0;
 }
+.login-div span{
+    text-align: center;
+    display: block;
+    margin: 15px 0;
+}
 
 .login-div input{
     width: 100%;
@@ -34,6 +39,14 @@
     font-size: 18px;
 }
 
+.login-button{
+    text-align: center;
+}
+.login-button a{
+    color: orangered;
+    text-decoration: none;
+    font-weight: 600;
+}
 .login-button button{
     width: 100%;
     outline: none;
@@ -47,4 +60,17 @@
     box-sizing: border-box;
     margin-bottom: 25px;
     margin-top: 10px;
+}
+
+
+.google-div{
+    margin-bottom: 15px;
+    border: 1px solid grey;
+    padding: 10px 0;    
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+.google-div:hover{
+    color: orangered;
 }
