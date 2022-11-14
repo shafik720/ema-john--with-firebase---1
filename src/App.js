@@ -5,6 +5,7 @@ import './App.css';
 import Cart from './Component/Cart/Cart';
 import Error from './Component/Error/Error';
 import Header from './Component/Header/Header';
+import Login from './Component/Login/Login';
 import Shop from './Component/Shop/Shop';
 import ShopCart from './Component/ShopCart/ShopCart';
 
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Shop></Shop>}></Route>
         <Route path="/shopcart" element={<ShopCart></ShopCart>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
       </Routes>
     </div>
