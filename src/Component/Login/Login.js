@@ -1,6 +1,8 @@
 import React from 'react';
 import './Login.css';
 import googleLogo from "../../utilities/google.svg"
+import { Link } from 'react-router-dom';
+import Register from '../Register/Register';
 
 
 const Login = () => {
@@ -21,7 +23,7 @@ const Login = () => {
                             </div>
                             <div className="login-button">
                                 <button>Login</button>
-                                <p>New to Ema-John ? <a href="#">Create New Account</a> </p>
+                                <p>New to Ema-John ? <Link to="/register" element={<Register></Register>}>Create New Account</Link> </p>
                             </div>
                             <span><h5>Or</h5></span>
                             <div draggable className="google-div">
