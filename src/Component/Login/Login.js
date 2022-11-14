@@ -15,11 +15,11 @@ const Login = () => {
                             <h2>Log In</h2>
                             <div className="email-div">
                                 <p>Email</p>
-                                <input type="email" name="" id="" />
+                                <input type="email" name="" id="" required/>
                             </div>
                             <div className="password-div">
                                 <p>Password</p>
-                                <input type="password" name="" id="" />
+                                <input type="password" name="" id="" required/>
                             </div>
                             <div className="login-button">
                                 <button>Login</button>

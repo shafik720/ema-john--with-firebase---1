@@ -9,7 +9,7 @@ const Register = () => {
     let[email, setEmail] = useState('');
     let[password, setPassword] = useState('');
     let[confirmPassword, setConfirmPassword] = useState('');
-    // let[] = useState('');
+    let[error, setError] = useState('');
     function handleEmail(e){
         setEmail(e.target.value);
     }
@@ -21,6 +21,10 @@ const Register = () => {
     }
     function handleSubmit(e){
         e.preventDefault();
+        if(password !== confirmPassword){
+            setError("Your Password Didn't match")
+            return;
+        }
     }
     return (
         <div className='my-5'>
@@ -32,16 +36,17 @@ const Register = () => {
                             <h2>Register</h2>
                             <div className="email-div">
                                 <p>Email</p>
-                                <input onBlur={handleEmail} type="email" name="" id="" />
+                                <input onBlur={handleEmail} type="email" name="" id="" required/>
                             </div>
                             <div className="password-div">
                                 <p>Password</p>
-                                <input onBlur={handlePassword} type="password" name="" id="" />
+                                <input onBlur={handlePassword} type="password" name="" id="" required/>
                             </div>
                             <div className="password-div">
                                 <p>Confirm Password</p>
-                                <input onBlur={handleConfirmPassword} type="password" name="" id="" />
+                                <input onBlur={handleConfirmPassword} type="password" name="" id="" required/>
                             </div>
+                            <h3 style={{color:'red'}}>{error}</h3>
                             <div className="login-button">
                                 <button>Sign Up</button>
                                 <p>Already Registered ? <Link to="/login" element={<Login></Login>}>Log In</Link> </p>
