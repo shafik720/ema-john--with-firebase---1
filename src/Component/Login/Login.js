@@ -6,8 +6,8 @@ const Login = () => {
         <div className='my-5'>
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6">
-                        <div className="login-div">
+                    <div className="col-lg-6 mx-auto">
+                        <div className="login-div mx-auto">
                             <h1>Log In</h1>
                             <div className="email-div">
                                 <p>Email</p>

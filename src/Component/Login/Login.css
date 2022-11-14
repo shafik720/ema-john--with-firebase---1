@@ -1,1 +1,19 @@
 
+.login-div{
+    border: 3px solid teal;
+    border-radius: 5px;
+    padding: 20px 15px;
+}
+
+.login-div h1{
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+.login-div p{
+    margin: 0;
+}
+
+.login-div input{
+    width: 100%;
+    margin: 5px 0 20px 0;
+}
