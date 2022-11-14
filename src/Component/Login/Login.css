@@ -2,7 +2,7 @@
 .login-div{
     border: 3px solid teal;
     border-radius: 5px;
-    padding: 20px 15px;
+    padding: 20px 20px;
 }
 
 .login-div h1{
@@ -32,4 +32,19 @@
     color: #0080CE;
     font-weight: 600;
     font-size: 18px;
+}
+
+.login-button button{
+    width: 100%;
+    outline: none;
+    height: 50px;
+    border-radius: 5px;
+    background: linear-gradient(45deg, darkblue, #0080CE);
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    border: none;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    margin-top: 10px;
 }
