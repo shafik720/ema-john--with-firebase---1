@@ -16,4 +16,20 @@
 .login-div input{
     width: 100%;
     margin: 5px 0 20px 0;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    padding: 0 10px;
+    transition: all 0.1s;
+}
+.login-div input:focus{
+    border: 2px solid #0080CE;
+}
+
+.email-div p, .password-div p{
+    color: #0080CE;
+    font-weight: 600;
+    font-size: 18px;
 }
