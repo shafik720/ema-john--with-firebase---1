@@ -13,7 +13,9 @@ const Login = () => {
     function handleEmail(e){
         setEmail(e.target.value);
     }
-    
+    function handlePassword(e){
+        setPassword(e.target.value);
+    }
     const [
         signInWithEmailAndPassword,
         user,
