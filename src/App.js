@@ -26,7 +26,7 @@ function App() {
         <Route path="/shopcart" element={<RequireAuth><ShopCart></ShopCart></RequireAuth>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>} ></Route>
-        <Route path='/contact' element={<Contact></Contact>}></Route>
+        <Route path='/contact' element={<RequireAuth><Contact></Contact></RequireAuth>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
       </Routes>
     </div>
