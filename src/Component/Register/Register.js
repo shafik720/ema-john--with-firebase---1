@@ -1,15 +1,20 @@
 import React from 'react';
 import './Register.css';
 import googleLogo from "../../utilities/google.svg"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Login from '../Login/Login';
 import { useState } from 'react';
+import {  useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+
 
 const Register = () => {
     let[email, setEmail] = useState('');
     let[password, setPassword] = useState('');
     let[confirmPassword, setConfirmPassword] = useState('');
     let[error, setError] = useState('');
+    const[createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth);
+
     function handleEmail(e){
         setEmail(e.target.value);
     }
@@ -18,6 +23,11 @@ const Register = () => {
     }
     function handleConfirmPassword(e){
         setConfirmPassword(e.target.value);
+    }
+    
+    const navigate = useNavigate();
+    if(user){
+        navigate('/');
     }
     function handleSubmit(e){
         e.preventDefault();
@@ -28,8 +38,8 @@ const Register = () => {
         if(password.length<6){
             setError('Password too short, try again');
             return;
-        }
-        // const[]
+        }        
+        createUserWithEmailAndPassword(email, password);
     }
     return (
         <div className='my-5'>
