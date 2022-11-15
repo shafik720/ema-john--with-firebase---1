@@ -3,9 +3,13 @@ import './Login.css';
 import googleLogo from "../../utilities/google.svg"
 import { Link } from 'react-router-dom';
 import Register from '../Register/Register';
+import { useState } from 'react';
 
 
 const Login = () => {
+    const[email, setEmail] = useState('');
+    const[password, setPassword] = useState('');
+    
     return (
         <div className='my-5'>
             <div className="container">
