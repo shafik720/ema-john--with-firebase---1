@@ -25,6 +25,11 @@ const Register = () => {
             setError("Your Password Didn't match")
             return;
         }
+        if(password.length<6){
+            setError('Password too short, try again');
+            return;
+        }
+        // const[]
     }
     return (
         <div className='my-5'>
