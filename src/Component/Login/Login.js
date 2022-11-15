@@ -6,6 +6,7 @@ import Register from '../Register/Register';
 import { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { Spinner } from 'react-bootstrap';
 
 
 const Login = () => {
@@ -50,6 +51,10 @@ const Login = () => {
                                 </div>
                                 <div className="login-button">
                                     <h4 style={{color:'red'}}> {error && `${error.message}`} </h4>
+                                    {
+                                        loading &&       <Spinner animation="border" variant="danger" />
+
+                                    }
                                     <button>Login</button>
                                     <p>New to Ema-John ? <Link to="/register" element={<Register></Register>}>Create New Account</Link> </p>
                                 </div>
