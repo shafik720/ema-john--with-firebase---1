@@ -4,12 +4,22 @@ import googleLogo from "../../utilities/google.svg"
 import { Link } from 'react-router-dom';
 import Register from '../Register/Register';
 import { useState } from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 
 const Login = () => {
     const[email, setEmail] = useState('');
     const[password, setPassword] = useState('');
+    function handleEmail(e){
+        setEmail(e.target.value);
+    }
     
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useSignInWithEmailAndPassword(auth);
     return (
         <div className='my-5'>
             <div className="container">
