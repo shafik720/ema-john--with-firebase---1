@@ -3,6 +3,7 @@ import { createContext } from 'react';
 import { Route, Routes } from 'react-router';
 import './App.css';
 import Cart from './Component/Cart/Cart';
+import Contact from './Component/Contact/Contact';
 import Error from './Component/Error/Error';
 import Header from './Component/Header/Header';
 import Login from './Component/Login/Login';
@@ -25,6 +26,7 @@ function App() {
         <Route path="/shopcart" element={<RequireAuth><ShopCart></ShopCart></RequireAuth>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>} ></Route>
+        <Route path='/contact' element={<Contact></Contact>}></Route>
         <Route path="*" element={<Error></Error>}></Route>
       </Routes>
     </div>
