@@ -1,7 +1,7 @@
 import React from 'react';
 import './Login.css';
 import googleLogo from "../../utilities/google.svg"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Register from '../Register/Register';
 import { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -27,6 +27,10 @@ const Login = () => {
     function handleSubmit(e){
         e.preventDefault();
         signInWithEmailAndPassword(email, password);
+    }
+    let navigate = useNavigate();
+    if(user){
+        navigate('/');
     }
     return (
         <div className='my-5'>
